@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+@await Html.PartialAsync("/Views/_Greeting.cshtml")
+<span>More stuff here....</span>
+
+<br>
+
+<div>
+        <div>I am from ViewData</div>
+        @ViewData["CurrentDataAndTime"]
+    </div>
+
+    @*<div>
+        <div>I am from ViewData</div>
+        @ViewData["MyString"]
+    </div>
+
+    <div>
+        <div>I am from ViewBag</div>
+        @ViewBag.CurrentDataAndTime
+    </div>*@
+
+    <div>@ViewData["MyString"]</div>
+
+@*    <div>@TempData["CurrentDataAndTime"]</div>
+*@
+
